@@ -8,12 +8,14 @@ import Header from './Components/Header/Header';
 import Product from './Components/Product/Product';
 import Home from './Components/Home/Home';
 import ShowP from './Components/ShowP/ShowP';
+import NotFound from './Components/NotFound/NotFound';
 function App() {
   
   return (
     <>
  
     <div>
+   
       <Routes>
       <Route path="/" element={<Header />} />
         <Route path="/Home" element={<Header />} />
@@ -26,7 +28,8 @@ function App() {
           <Route path=":id" element={<ShowP />} />
          
         </Route>
-        
+        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={ <NotFound />}/>
       </Routes>
     </div>
     </>
